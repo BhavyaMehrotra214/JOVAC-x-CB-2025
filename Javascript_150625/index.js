@@ -28,29 +28,6 @@
 //console.log(abc);
 
 
-//function attachEventListerner(){
-//   let count =0;
-//    document.getElementById('click').addEventListener('click',function xyz(){
-    //    console.log("button clicked",++count);
-   // });
-//}
-//attachEventListerner();
-
-
-
-//function attachEventListerner() {
- //   let count = 0;
-
-
- //   for (let i = 0; i < 100; i++) {
-  //      document.getElementById('click').addEventListener('click', function () {
-  //          console.log("Listener", i + 1, "button clicked", ++count);
-  //      });
-  //  }
-//}
-
-//attachEventListerner();
-
 //function createObject(){
  //     let  person = {
  //           name: 'jenny',
