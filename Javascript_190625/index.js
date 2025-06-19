@@ -77,6 +77,18 @@
 //  console.log("paying bill");
 // }
             
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log("program start");
 // setTimeout(()=>{
 //     console.log("i am setTimeout");
@@ -87,62 +99,37 @@
 // console.log("program end");
 
 
+
+
 // Higher Order Function
- // const data = [2,4,5];
- // const calcluatedouble = function (data){
- // let output = [];
- // for(let i =0; i<data.length;i++){
- //    output.push(data[i]*data[i]);
- //  }
- // return output;
-// }
-// console.log(calcluatedouble(data));
+ const data = [2,4,5];
+  const calcluatedouble = function (data){
+  let output = [];
+  for(let i =0; i<data.length;i++){
+     output.push(data[i]*data[i]);
+  }
+  return output;
+}
+console.log(calcluatedouble(data));
 
-//const calcluatehalf = function (data){
- // let output =[]
- // for (let i=0; i<data.length;i++){
- //   output.push(data[i]/2);
- // }
- // return output;
-//}
-//console.log(calcluatehalf(data));
+const calcluatehalf = function (data){
+  let output =[]
+  for (let i=0; i<data.length;i++){
+    output.push(data[i]/2);
+  }
+  return output;
+}
+console.log(calcluatehalf(data));
 
-// const doubledata = function (data){
-// return data*data;
-// }
+const doubledata = function (data){
+  return data*data;
+}
 
-// const calculate = function (data,logic){
-//  let output = [];
-//  for (let i =0;i<data.length;i++){
-//    output.push(logic(data[i]));
-//  }
-//  return output;
-// }
-// const arr = [1,2,3];
-//console.log((calculate(data,doubledata)));
-
-// function double(x){
-//  return x*2
-// }
-
-// const output = Array.map(double);
-// console.log(output);
-
-// Array.prototype.calcluate = function (logic){
-//  const output = []
-// for(let i =0; i<this.length;i++){
-//  output.push(logic(arr[i]));
-//  }
-//  return output;
-// }
-// const arr1 = [4,5,6];
-// const output = arr1.calcluate(double);
-// console.log(output);
-
-// const arr= [2,4,5,6,7]
-// function isodd(x){
-//  return x%2
-// }
-// const output = arr.filter[]
-
-// }
+const cacluate = function (data,logic){
+  let output =[];
+  for (let i =0;i<data.legth;i++){
+    output.push(logic(data[i]));
+  }
+  return output;
+}
+console.log((cacluate(data,doubledata)));
