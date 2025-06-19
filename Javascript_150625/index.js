@@ -138,11 +138,3 @@
 // const arr1 = [4,5,6];
 // const output = arr1.calcluate(double);
 // console.log(output);
-
-// const arr= [2,4,5,6,7]
-// function isodd(x){
-//  return x%2
-// }
-// const output = arr.filter[]
-
-// }
