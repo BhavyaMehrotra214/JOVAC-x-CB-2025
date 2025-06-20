@@ -7,9 +7,6 @@
 // username = "bhavya";
 // console.log(username);
 
-//operations//
-// let score =102;
-
 //var x =1;
 //a();
 //b();
@@ -22,3 +19,16 @@
 //  var x = 100;
 //  console.log(x);
 //}
+
+function findCar(carData){
+    console.log(carData.type);
+}
+
+const carData = {
+   name:"Tata Harrier", type: "electric"
+}
+const carData2={
+    name:"tata curvv",type: "coupe"
+}
+findCar(carData);
+findCar(carData2)
