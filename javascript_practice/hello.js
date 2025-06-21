@@ -20,7 +20,8 @@ function ordertea(typeoftea){
     }
     return confrimorder()
 }
-let 
+let orderconfrimed = ordertea("chai");
+console.log(orderconfrimed)
 //var x =1;
 //a();
 //b();
