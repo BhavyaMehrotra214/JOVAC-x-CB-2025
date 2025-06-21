@@ -7,6 +7,20 @@
 // username = "bhavya";
 // console.log(username);
 
+//////////////////function///////////////
+function maketea(typeofTea){
+    return `Making ${typeofTea}`;
+}
+let teaorder = maketea("leamotea");
+console.log(teaorder);
+
+function ordertea(typeoftea){
+    function confrimorder(){
+        return `order confrim`;
+    }
+    return confrimorder()
+}
+let 
 //var x =1;
 //a();
 //b();
@@ -91,32 +105,98 @@
 // console.log(cal(radius, calcircumference));
 // console.log(cal(radius, diameter));
 
-const a = [1,2,3,4];
-const b = [2,3,4,5];
-const add = function(a,b){
-    return a+b;
-}
-const sub = function(a,b){
-    return a-b;
-}
-const multiply = function(a,b){
-    return a*b;
-}
-const divide = function(a,b){
-      return a/b;
-}
-const double = function(a,b){
-    return (a * 2)+(b * 2);
-}
-const cal = function(a,b,logic){
-    const output =[];
-    for(let i =0;i<a.length;i++){
-        output.push(logic(a[i],b[i]));
+// const a = [1,2,3,4];
+// const b = [2,3,4,5];
+// const add = function(a,b){
+//    return a+b;
+// }
+// const sub = function(a,b){
+//    return a-b;
+// }
+// const multiply = function(a,b){
+//    return a*b;
+// }
+// const divide = function(a,b){
+//      return a/b;
+// }
+// const double = function(a,b){
+//    return (a * 2)+(b * 2);
+// }
+// const cal = function(a,b,logic){
+//    const output =[];
+//    for(let i =0;i<a.length;i++){
+//        output.push(logic(a[i],b[i]));
+//    }
+//    return output;
+// }
+// console.log(cal(a,b,add));
+// console.log(cal(a,b,sub));
+// console.log(cal(a,b,multiply));
+// console.log(cal(a,b,divide));
+// console.log(cal(a,b,double));
+
+
+
+///////////////////////////////////////////map reduce filter /////////////////////////////////////////////////////////
+
+const arr =[ 5,3,4,6,7]
+// function double(x){
+//    return x*2;
+ // }
+// function binary(x){
+//    return x.toString(2);
+// }
+// const output = arr.map(binary);
+// console.log(output);
+
+// const output = arr.filter(function oddv(x){
+//    return x%2!=0;
+// });
+//    console.log(output);
+
+function findsum(arr){
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum=sum+arr[i];
     }
-    return output;
+    return sum;
 }
-console.log(cal(a,b,add));
-console.log(cal(a,b,sub));
-console.log(cal(a,b,multiply));
-console.log(cal(a,b,divide));
-console.log(cal(a,b,double));
+console.log(findsum(arr));
+
+const output = arr.reduce(function (acc, curr){
+    acc = acc+curr;
+    return acc;
+},0);
+console.log(output);
+
+//// find max///
+// const outputt = arr.reduce(function (acc, curr){
+//    if(acc<curr);
+//    acc = curr;
+//     return acc;
+// },0);
+
+// console.log(outputt);
+
+// const ouput = useSyncExternalStore.map((x) => x.firstname+ " "+ x.lastname)
+
+// console.log(output);
+
+/// acc = {26 : 2, 75: 1, 50: 1}
+
+// const outpt = user.reduce(function(acc,curr){
+//     if(acc[curr.age]){
+//        acc[curr.age] = ++acc[curr.age];
+//     }
+//     else {
+//        acc[curr.age] = 1
+//     }
+//     return acc;
+// },{});
+// console.log(outpt);
+
+// const outpuut  = user.filter((x) => x.age<30).map((x) => x.firstname);
+//    console.log(output);
+
+
+
