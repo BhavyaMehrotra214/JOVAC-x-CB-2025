@@ -39,23 +39,23 @@
 
 // object 
 
-const users = [
-    {
-        firstname: "bhavya",
-        lastname: "mehrotra",
-        age: 21
-    },
-    {
-        firstname: "kirti",
-        lastname: "mehrotra",
-        age:20
-    },
-    {
-       firtsname: "tanisha",
+// const users = [
+//    {
+//        firstname: "bhavya",
+//        lastname: "mehrotra",
+//        age: 21
+//    },
+//    {
+//        firstname: "kirti",
+//        lastname: "mehrotra",
+//        age:20
+//    },
+//    {
+//       firtsname: "tanisha",
 //       lastname: "mehrotra",
-       age:20
-    },
-]
+//       age:20
+//    },
+// ]
 // console.log(users.firstname);
 
 // const output = users.map(user => user.firstname + " " + user.lastname);
