@@ -178,8 +178,12 @@ console.log(output);
 // },0);
 
 // console.log(outputt);
+// const user = [
+//    {firstname:"bhavya",lastname:"mehrotra",age:20},
+//    {firstname:"ruchi",lastname:"mehrotra",age:48},
+//    ]
 
-// const ouput = useSyncExternalStore.map((x) => x.firstname+ " "+ x.lastname)
+// const ouput = user.map((x) => x.firstname+ " "+ x.lastname)
 
 // console.log(output);
 
