@@ -8,20 +8,25 @@
 // console.log(username);
 
 //////////////////function///////////////
-function maketea(typeofTea){
-    return `Making ${typeofTea}`;
-}
-let teaorder = maketea("leamotea");
-console.log(teaorder);
+// function maketea(typeofTea){
+//    return `Making ${typeofTea}`;
+// }
+// let teaorder = maketea("leamotea");
+// console.log(teaorder);
 
-function ordertea(typeoftea){
-    function confrimorder(){
-        return `order confrim`;
-    }
-    return confrimorder()
-}
-let orderconfrimed = ordertea("chai");
-console.log(orderconfrimed)
+// function ordertea(typeoftea){
+//    function confrimorder(){
+//        return `order confrim`;
+//    }
+//    return confrimorder()
+// }
+// let orderconfrimed = ordertea("chai");
+// console.log(orderconfrimed)
+
+///////////////////////////////////////arrow function////////////////////
+const caltotal = (price,quantity) =>  price * quantity;
+
+let totalcost = caltotal(20*30);
 //var x =1;
 //a();
 //b();
@@ -47,6 +52,36 @@ console.log(orderconfrimed)
 // }
 // findCar(carData);
 // findCar(carData2)
+
+////////////////////////////////// call back function ///////////////////////
+// setTimeout(function (){
+//    console.log("time");
+// },5000);
+// function x(y){
+// console.log("x");
+// y();
+// }
+// x(function y(){     // y is call back function
+// console.log("y");
+// });
+function maketea(typeoftea){
+ return `maletea:${typeoftea}`;
+}
+function processteaorder(tea){
+     return tea('earl grey')
+}
+let order = processteaorder(maketea)
+console.log(order);
+
+function createteamaker(){
+    return function(teaType){
+        return 'Making ${teaType}';
+    };
+}
+let teamaker = createteamaker();
+let result = teamaker("green tea");
+console.log(result);
+
 
 ///   --------------higher order function-------
 // function x() {
@@ -140,7 +175,7 @@ console.log(orderconfrimed)
 
 ///////////////////////////////////////////map reduce filter /////////////////////////////////////////////////////////
 
-const arr =[ 5,3,4,6,7]
+// const arr =[ 5,3,4,6,7]
 // function double(x){
 //    return x*2;
  // }
@@ -155,20 +190,20 @@ const arr =[ 5,3,4,6,7]
 // });
 //    console.log(output);
 
-function findsum(arr){
-    let sum=0;
-    for(let i=0;i<arr.length;i++){
-        sum=sum+arr[i];
-    }
-    return sum;
-}
-console.log(findsum(arr));
+// function findsum(arr){
+//    let sum=0;
+//    for(let i=0;i<arr.length;i++){
+//        sum=sum+arr[i];
+//    }
+//    return sum;
+// }
+// console.log(findsum(arr));
 
-const output = arr.reduce(function (acc, curr){
-    acc = acc+curr;
-    return acc;
-},0);
-console.log(output);
+// const output = arr.reduce(function (acc, curr){
+//    acc = acc+curr;
+//    return acc;
+// },0);
+// console.log(output);
 
 //// find max///
 // const outputt = arr.reduce(function (acc, curr){
@@ -204,4 +239,46 @@ console.log(output);
 //    console.log(output);
 
 
+////////////////////////////////////////call back hell//////////////////////////////////////////////////
+
+
+///////////////////////////// promises ///////////////////////////////////////
+cartt = ["s","p","c"];
+createorder(cartt, function(orderid){
+    proceedtopayment(orderid, function(paymentinfo){
+        showodersummary(paymentinfo, function(updatewallet){
+           updatewalletbalance();
+        });
+    });
+});
+
+
+createorder(cartt).then(function(orderid){
+    return proceedtopayment(orderid);
+})
+.then(function(paymentInfo){
+    return showodersummary(paymentInfo);
+})
+.then(function(paymentInfo){
+    return updatewalletbalance(paymentInfo);
+});
+
+
+function createorder(cartt){
+    const pr = new Promise(function(resolve, reject){
+           if(!validateCart(cartt)){
+              const err = new Error("cart is not valid");
+              reject(err);
+           }
+           //logic create order
+           const orderid = "1234";
+           if(orderid){
+            resolve(orderid);
+           }
+    });
+    return pr
+}
+function validateCart(cart){
+    return true;
+}
 
