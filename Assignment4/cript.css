@@ -1,0 +1,18 @@
+#grandparent{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(108, 108, 156);
+    justify-content: center;
+}
+#parent{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(122, 28, 28);
+    justify-content: center;
+}
+#child{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(117, 156, 108);
+    justify-content: center;
+}
