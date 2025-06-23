@@ -38,10 +38,8 @@ document.getElementById("parent").addEventListener("click",(e)=>{
        if(e.target == e.currentTarget)
        console.log("parent clicked");
        e.stopPropagation();
-<<<<<<< HEAD
 },true);
        
-=======
 });
        
 document.getElementById("child").addEventListener("click",(e)=>{
@@ -49,4 +47,3 @@ document.getElementById("child").addEventListener("click",(e)=>{
        console.log("child clicked");
          }
 });
->>>>>>> aac88af (capturing/bubbling)
