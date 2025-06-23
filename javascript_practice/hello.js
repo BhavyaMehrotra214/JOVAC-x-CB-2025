@@ -243,42 +243,54 @@ console.log(result);
 
 
 ///////////////////////////// promises ///////////////////////////////////////
-cartt = ["s","p","c"];
-createorder(cartt, function(orderid){
-    proceedtopayment(orderid, function(paymentinfo){
-        showodersummary(paymentinfo, function(updatewallet){
-           updatewalletbalance();
-        });
-    });
-});
+// cartt = ["s","p","c"];
+// createorder(cartt, function(orderid){
+//    proceedtopayment(orderid, function(paymentinfo){
+//        showodersummary(paymentinfo, function(updatewallet){
+//           updatewalletbalance();
+//        });
+//    });
+// });
 
 
-createorder(cartt).then(function(orderid){
-    return proceedtopayment(orderid);
-})
-.then(function(paymentInfo){
-    return showodersummary(paymentInfo);
-})
-.then(function(paymentInfo){
-    return updatewalletbalance(paymentInfo);
-});
+// createorder(cartt).then(function(orderid){
+//    return proceedtopayment(orderid);
+// })
+// .then(function(paymentInfo){
+//    return showodersummary(paymentInfo);
+// })
+// .then(function(paymentInfo){
+//    return updatewalletbalance(paymentInfo);
+// });
 
 
-function createorder(cartt){
-    const pr = new Promise(function(resolve, reject){
-           if(!validateCart(cartt)){
-              const err = new Error("cart is not valid");
-              reject(err);
-           }
-           //logic create order
-           const orderid = "1234";
-           if(orderid){
-            resolve(orderid);
-           }
-    });
-    return pr
-}
-function validateCart(cart){
-    return true;
-}
+// function createorder(cartt){
+//    const pr = new Promise(function(resolve, reject){
+//          if(!validateCart(cartt)){
+//              const err = new Error("cart is not valid");
+//              reject(err);
+//           }
+// 
+           /////logic create order
+//           const orderid = "1234";
+//           if(orderid){
+//            resolve(orderid);
+//           }
+//    });
+//    return pr
+// }
+// function validateCart(cart){
+//    return true;
+// }
 
+///////////////////////////////  event bubbling //////////////////
+document.getElementById("grandparent").addEventListener('click',(e)=>{
+    console.log("grandparent clicked");
+    e.stopPropagation();
+},true);//capturing
+document.getElementById("parent").addEventListener('click',()=>{
+    console.log("grandparent clicked");
+},false);//bubbling
+document.getElementById("child").addEventListener('click',()=>{
+    console.log("child clicked");
+},true);
