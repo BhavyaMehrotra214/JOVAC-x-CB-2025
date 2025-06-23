@@ -30,7 +30,7 @@ const employees = [
 
   const totalex = experience.filter(x=> x.company === "Google" && x.experi > 5
   )
-  totalex.forEach(e=>console.log(`${e.name}-${e.company}`));
+  console.log(totalex);
  
   const totale = totalex.reduce((sum,curr) =>
     {
