@@ -58,7 +58,7 @@ function showSummary(summary, total){
     };
     console.log(`Remaining wallet balance: ${wallet.balance}`);
 }
-addProductTocart(1, () =>{
+addProductTocart(3, () =>{
     createorder(()=>{
         payment((summary, total) => {
             showSummary(summary, total);
