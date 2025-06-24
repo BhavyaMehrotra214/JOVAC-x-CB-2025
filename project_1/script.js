@@ -17,8 +17,10 @@ userdata.then(function(response){
     return response.json();
 })
 .then(function(reposData){
+    const order = document.getElementById("repo-list");
+    order.html="";
     for(let i =0;i<3 && i < reposData.length; i++){
-        document.getElementById("repo-list").innerHTML += `<li>${reposData[i].name}</li>`
+        order.innerHTML += `<li><a href="${reposData[i].html_url}" target ="_blank">${reposData[i].name}</a></li>`
     }
 })
 .catch(function(handleerror){
