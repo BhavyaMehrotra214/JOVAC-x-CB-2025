@@ -17,3 +17,13 @@ body {
 .avatar{
     width:150px;
 }
+ul#repo-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: center;
+    display: inline block;
+}
+ul#repo-list li {
+    display: list-item;
+    margin-bottom: 5px;
+}
