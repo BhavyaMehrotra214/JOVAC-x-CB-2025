@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+     <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <a href="/register">Register </a>
+    <div class="maincontainer">
+    <% users.forEach(element => { %>
+        <div class="container">
+         <a href="/users/<%= element._id %>">
+          <img src="<%=element.picture %>" alt="image">
+          <h2><%= element.name %></h2>
+         </a>
+        <button onclick="deleteuser('<%= element._id %>')">delete</button>
+    </div>
+    <% }) %>
+    </div>
+    <script>
+        async function deleteuser(id){
+            try{
+                const res = await fetch(`/users/${id}`, {method : 'delete'})
+                if(res.ok){
+                    alert('user deleted successfully');
+                }
+           
+            }
+            catch (err){
+                console.log(err)
+            }
+        }
+    </script>
+</body>
+</html>
