@@ -57,38 +57,38 @@ router.delete("/users/:id" , async(req,res)=>{
     res.json({message : "user deleted"});
 })
 
+router.get("/userupdate/:id",async(req,res)=>{
+    const user = await userModel.findById(req.params.id)
+    if(!user){
+        return res.send("user not found")
+    }
+    res.render("userupdate" , {user});
+});
 
-// router.patch("/update/:id", async (req, res) => {
-//    let { id } = req.params;
-//    let { name } = req.query;
+ router.post("/update/:id", async (req, res) => {
+    let { id } = req.params;
+    let { name } = req.body;
 
-//     if (!id) {
-//        return res.json({ message: "User ID is invalid" });
-//    }
-
-
-//    if(!mongoose.Types.ObjectId.isValid(id)){
-//        return res.json({message : "invalid userid"})
-//    }
-
-//    if (!name) {
-//        return res.json({ message: "Name is required" });
-//    }
+     if (!id) {
+        return res.json({ message: "User ID is invalid" });
+    }
 
 
-//    const user = await userModel.findByIdAndUpdate(
-//        id,
-//        { name },
-//        { new: true }
-//    );
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.json({message : "invalid userid"})
+    }
 
-//    if (!user) {
-//        return res.status(404).json({ message: "User not found" });
-//    }
+    if (!name) {
+        return res.json({ message: "Name is required" });
+    }
 
-//    res.json({ message: "User updated successfully", user });
-// });
+
+    const user = await userModel.findByIdAndUpdate(
+        id,
+        { name },
+       { new: true }
+   );
+    res.redirect("/");
+ });
 
 module.exports = router;
-
-

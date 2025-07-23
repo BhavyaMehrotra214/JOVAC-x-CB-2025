@@ -16,6 +16,8 @@
           <h2><%= element.name %></h2>
          </a>
         <button onclick="deleteuser('<%= element._id %>')">delete</button>
+        <a href="/userupdate/<%= element._id %>">
+            <button>Update</button>
     </div>
     <% }) %>
     </div>
