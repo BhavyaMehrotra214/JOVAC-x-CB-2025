@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(105, 170, 170);
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.profile{
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.avatar{
+    width:150px;
+}
+ul#repo-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: center;
+    display: inline block;
+}
+ul#repo-list li {
+    display: list-item;
+    margin-bottom: 5px;
+}
